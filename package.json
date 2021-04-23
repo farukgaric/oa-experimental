@@ -1,0 +1,37 @@
+{
+  "name": "oa-experimental",
+  "version": "1.0.0",
+  "description": "Experimental theme for combining various technologies into WordPress theme",
+  "main": "index.js",
+  "browserslist": [
+    "> 2%",
+    "ie > 9"
+  ],
+  "author": "Faruk Garic",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^5.2.4",
+    "mini-css-extract-plugin": "^1.5.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "postcss-loader": "^5.2.0",
+    "resolve-url-loader": "^3.1.2",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.35.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "foundation-sites": "^6.6.3"
+  },
+  "scripts": {
+    "dev": "webpack --mode=development --watch --progress --config webpack/dev.config.js",
+    "build": "webpack --mode=production --progress --config webpack/prod.config.js"
+  }
+}

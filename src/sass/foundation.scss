@@ -1,0 +1,16 @@
+// Utils needed for the settings
+@import '~foundation-sites/scss/util/util';
+@import '~foundation-sites/scss/util/mixins';
+
+// Import sass variable first
+@import 'foundation-settings';
+@import '~foundation-sites/scss/foundation';
+
+// You can remove components you are not using
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-typography;
+
+// Grids (choose one)
+@include foundation-xy-grid-classes;

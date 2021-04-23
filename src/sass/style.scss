@@ -1,0 +1,101 @@
+/*!
+Theme Name: oa-experimental
+Theme URI: https://www.farukgaric.com/
+Author: Faruk Garic
+Author URI: https://www.farukgaric.com/
+Description: Experimental theme for combining various technologies into WordPress theme. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: oa-experimental
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+_s is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "foundation";
+
+.container {
+  @include xy-grid-container;
+}
+
+.banner{
+  @include xy-grid(horizontal, true);
+  @include breakpoint(large) {
+    height: 400px;
+    overflow: hidden;
+  }
+  background: $primary-color;
+  @include xy-grid();
+  @at-root #{&}__column {
+    @include xy-cell(full);
+    @include breakpoint(large) {
+      @include xy-cell(
+              $size: 6/12,
+              $gutter-output: null,
+              $gutters: $grid-margin-gutters,
+              $gutter-type: margin,
+              $gutter-position: right,
+              $breakpoint: large,
+              $vertical: false,
+              $output: (base size gutters)
+      );
+    }
+    @include xy-gutters(0);
+    position: relative;
+  }
+  @at-root #{&}__featured-image {
+    margin-top: -25%;
+  }
+  @at-root #{&}__text {
+    @at-root #{&}-large {
+      font-size: 2em;
+      position: absolute;
+      top: 30%;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      color: $white;
+      @include breakpoint(large) {
+        top: 10%;
+        font-size: 3em;
+      }
+    }
+    @at-root #{&}-medium {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10%;
+    }
+    @at-root #{&}-normal {
+      text-align: center;
+    }
+  }
+  @at-root #{&}__column-solid-color {
+    background: $primary-color;
+  }
+
+}
